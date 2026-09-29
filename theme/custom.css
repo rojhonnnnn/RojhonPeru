@@ -1,0 +1,259 @@
+/* =========================================================================
+   ROJHON SOLUTIONS - custom theme
+   Palette: Hark Blue, Hark Green, Hark Turquoise, Hark Cerise, Hark Persian Blue
+   Loaded AFTER adminlte.min.css in theme/template.php so these rules win.
+   ========================================================================= */
+
+:root {
+  --hark-blue:          #2b3648;
+  --hark-blue-light:    #64748b;
+  --hark-green:         #0eb17a;
+  --hark-green-light:   #6ee7b7;
+  --hark-turquoise:     #0aa5c7;
+  --hark-turquoise-light:#5fe3f5;
+  --hark-cerise:        #c31f5e;
+  --hark-cerise-light:  #ff8fab;
+  --hark-persian-blue:  #1c2f9e;
+  --hark-persian-blue-light:#5b74e0;
+
+  --app-bg:        #f4f6f9;
+  --app-surface:   #ffffff;
+  --app-text:      #212529;
+  --app-border:    #dee2e6;
+}
+
+/* ---------------- LIGHT MODE (default) ---------------- */
+
+.main-header.navbar {
+  background-color: var(--hark-persian-blue) !important;
+  border-bottom: 3px solid var(--hark-cerise);
+}
+.main-header .nav-link,
+.main-header .nav-link i {
+  color: #f0f2fb !important;
+}
+.main-header .nav-link:hover {
+  color: var(--hark-turquoise-light) !important;
+}
+
+.main-sidebar,
+.sidebar-dark-primary {
+  background-color: var(--hark-blue) !important;
+}
+.sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link.active {
+  background-color: var(--hark-persian-blue) !important;
+  color: #fff !important;
+}
+.sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link:hover {
+  background-color: rgba(28, 47, 158, 0.35);
+}
+.brand-link {
+  border-bottom: 1px solid rgba(255,255,255,0.15) !important;
+}
+
+/* Fixed-size logo - stays the same size whether the sidebar is full width
+   or collapsed to icon-only (sidebar-mini), instead of shrinking with a
+   percentage width. 33px matches AdminLTE's own default brand-image size. */
+.brand-image-fixed {
+  width: 33px;
+  height: 33px;
+  object-fit: contain;
+  float: left;
+  margin-left: 0.8rem;
+  margin-top: -3px;
+  line-height: 0.8;
+}
+
+.btn-primary {
+  background-color: var(--hark-persian-blue) !important;
+  border-color: var(--hark-persian-blue) !important;
+}
+.btn-primary:hover {
+  background-color: var(--hark-persian-blue-light) !important;
+  border-color: var(--hark-persian-blue-light) !important;
+}
+.btn-success {
+  background-color: var(--hark-green) !important;
+  border-color: var(--hark-green) !important;
+}
+.btn-success:hover {
+  background-color: var(--hark-green-light) !important;
+  border-color: var(--hark-green-light) !important;
+}
+.btn-info {
+  background-color: var(--hark-turquoise) !important;
+  border-color: var(--hark-turquoise) !important;
+}
+.btn-info:hover {
+  background-color: var(--hark-turquoise-light) !important;
+  border-color: var(--hark-turquoise-light) !important;
+}
+.btn-danger {
+  background-color: var(--hark-cerise) !important;
+  border-color: var(--hark-cerise) !important;
+}
+.btn-danger:hover {
+  background-color: var(--hark-cerise-light) !important;
+  border-color: var(--hark-cerise-light) !important;
+}
+
+.badge-warning {
+  background-color: #eab308 !important;
+}
+.badge-success {
+  background-color: var(--hark-green) !important;
+}
+.badge-info {
+  background-color: var(--hark-turquoise) !important;
+}
+.badge-danger {
+  background-color: var(--hark-cerise) !important;
+}
+
+.card-primary.card-outline,
+.card-primary:not(.card-outline) > .card-header {
+  border-top-color: var(--hark-persian-blue);
+}
+.card-primary:not(.card-outline) > .card-header {
+  background-color: var(--hark-persian-blue);
+}
+
+a, .breadcrumb-item a {
+  color: var(--hark-persian-blue);
+}
+a:hover {
+  color: var(--hark-cerise);
+}
+
+/* Dark-mode toggle button in the navbar */
+#darkModeToggle {
+  cursor: pointer;
+}
+#darkModeToggle i {
+  font-size: 1.05rem;
+}
+
+
+/* ---------------- DARK MODE ---------------- */
+/* Toggled by adding class="dark-mode-custom" to <html> (see template.php). */
+
+html.dark-mode-custom body {
+  background-color: #10141c;
+  color: #dbe1ea;
+}
+
+html.dark-mode-custom .content-wrapper,
+html.dark-mode-custom .main-footer {
+  background-color: #10141c !important;
+  color: #dbe1ea;
+}
+
+html.dark-mode-custom .card {
+  background-color: #1a2030;
+  color: #dbe1ea;
+  border-color: #2a3145;
+}
+html.dark-mode-custom .card-body,
+html.dark-mode-custom .card-footer {
+  background-color: #1a2030;
+  color: #dbe1ea;
+}
+
+html.dark-mode-custom .table {
+  color: #dbe1ea;
+}
+html.dark-mode-custom .table-bordered,
+html.dark-mode-custom .table-bordered td,
+html.dark-mode-custom .table-bordered th {
+  border-color: #2a3145;
+}
+html.dark-mode-custom .table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(255,255,255,0.03);
+}
+
+html.dark-mode-custom .modal-content {
+  background-color: #1a2030;
+  color: #dbe1ea;
+}
+html.dark-mode-custom .form-control,
+html.dark-mode-custom .custom-select,
+html.dark-mode-custom select.form-control {
+  background-color: #232a3d;
+  border-color: #343d55;
+  color: #dbe1ea;
+}
+html.dark-mode-custom .form-control::placeholder {
+  color: #7d8aa3;
+}
+html.dark-mode-custom .form-control:focus {
+  background-color: #232a3d;
+  color: #dbe1ea;
+  border-color: var(--hark-turquoise);
+  box-shadow: 0 0 0 0.2rem rgba(10, 165, 199, 0.25);
+}
+
+html.dark-mode-custom .text-dark {
+  color: #dbe1ea !important;
+}
+html.dark-mode-custom .text-muted {
+  color: #8c96ab !important;
+}
+
+html.dark-mode-custom .main-header.navbar {
+  background-color: #141a29 !important;
+  border-bottom-color: var(--hark-cerise);
+}
+html.dark-mode-custom .main-sidebar {
+  background-color: #0d111c !important;
+}
+
+html.dark-mode-custom .dropdown-menu {
+  background-color: #1a2030;
+  color: #dbe1ea;
+  border-color: #2a3145;
+}
+
+html.dark-mode-custom .callout {
+  background-color: #232a3d;
+}
+
+/* Dashboard stat cards (small-box: bg-info / bg-success / bg-warning / bg-danger).
+   Keep them colorful - just deepen slightly and add a border/shadow so
+   they read as part of a dark page instead of glowing on top of it. */
+html.dark-mode-custom .small-box {
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.06), 0 4px 10px rgba(0,0,0,0.35);
+}
+html.dark-mode-custom .small-box.bg-info {
+  background-color: #0a7f99 !important;
+}
+html.dark-mode-custom .small-box.bg-success {
+  background-color: #0c8f63 !important;
+}
+html.dark-mode-custom .small-box.bg-warning {
+  background-color: #b3860b !important;
+}
+html.dark-mode-custom .small-box.bg-danger {
+  background-color: #9c1849 !important;
+}
+html.dark-mode-custom .small-box .icon {
+  opacity: 0.25;
+}
+html.dark-mode-custom .small-box-footer {
+  background-color: rgba(0,0,0,0.18) !important;
+  color: #f0f2fb !important;
+}
+html.dark-mode-custom .small-box-footer:hover {
+  background-color: rgba(0,0,0,0.3) !important;
+}
+
+/* ---------------- ROJHON SOLUTIONS additions ---------------- */
+.info-box { color: inherit; }
+a.info-box:hover { text-decoration: none; box-shadow: 0 0 1px rgba(0,0,0,.125), 0 3px 8px rgba(0,0,0,.15); }
+html.dark-mode-custom .info-box { background-color: #1a2030; color: #dbe1ea; }
+html.dark-mode-custom .page-item .page-link { background-color: #1a2030; border-color: #2a3145; color: #dbe1ea; }
+html.dark-mode-custom .page-item.active .page-link { background-color: var(--hark-persian-blue); border-color: var(--hark-persian-blue); }
+html.dark-mode-custom .dataTables_wrapper, html.dark-mode-custom .dataTables_info { color: #dbe1ea; }
+html.dark-mode-custom .swal2-popup { background: #1a2030; color: #dbe1ea; }
+html.dark-mode-custom .swal2-title, html.dark-mode-custom .swal2-content, html.dark-mode-custom .swal2-html-container { color: #dbe1ea; }
+html.dark-mode-custom .error-page .headline { color: #eab308; }
+.brand-link .brand-text { font-size: 1.05rem; letter-spacing: .02em; white-space: nowrap; }
